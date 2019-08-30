@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+   <repositories>
+		<repository>
+			<id>maven-public</id>
+			<url>http://localhost:8081/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven-public</id>
+			<url>http://localhost:8081/repository/maven-public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+  <groupId>fr.saintmartin.new</groupId>
+  <artifactId>fr.saintmartin.new</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>fr.saintmartin.new</name>
+  <url>http://maven.apache.org</url>
+
+<properties>
+   <maven.compiler.source>1.8</maven.compiler.source>
+   <maven.compiler.target>1.8</maven.compiler.target>
+ </properties>
+ 
+ <distributionManagement>
+<snapshotRepository>
+<id>nexus</id>
+<name>Nexus Snapshot Repo</name>
+<url>http://localhost:8081/repository/maven-snapshots/</url>
+</snapshotRepository>
+<repository>
+<id>nexus</id>
+<name>Nexus Release Repo</name>
+<url>http://localhost:8081/repository/maven-releases/</url>
+</repository>
+</distributionManagement>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+<!-- https://mvnrepository.com/artifact/com.stripe/stripe-java -->
+<dependency>
+    <groupId>com.stripe</groupId>
+    <artifactId>stripe-java</artifactId>
+    <version>11.4.0</version>
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/com.ibeetl/beetl-framework-starter -->
+<dependency>
+    <groupId>com.ibeetl</groupId>
+    <artifactId>beetl-framework-starter</artifactId>
+    <version>1.2.13.RELEASE</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/software.amazon.awscdk/codepipeline -->
+<dependency>
+    <groupId>software.amazon.awscdk</groupId>
+    <artifactId>codepipeline</artifactId>
+    <version>1.6.0.DEVPREVIEW</version>
+</dependency>
+
+
+   
+  </dependencies>
+
+ 
+  
+</project>
+
+
+	
